@@ -16,7 +16,7 @@ public class Cart {
    @Id 
    @GeneratedValue(strategy = GenerationType.AUTO)
    @Column(name="cart_no") private int cartNo;
-   @Column(name="car_amount") private int carAmount;
+   @Column(name="cart_amount") private int cartAmount;
    
    @OneToOne
    @JoinColumn(name = "ord_no")
