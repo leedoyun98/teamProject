@@ -1,4 +1,4 @@
-package com.example.demo.prd.service;
+package com.example.demo.prd.domain;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

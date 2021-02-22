@@ -1,4 +1,4 @@
-package com.example.demo.mem.web;
+package com.example.demo.mem.controller;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,10 +27,11 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
-import com.example.demo.brd.service.BoardRepository;
-import com.example.demo.mem.service.Member;
-import com.example.demo.mem.service.MemberRepository;
+import com.example.demo.brd.repository.BoardRepositoryImpl;
+import com.example.demo.mem.domain.Member;
+import com.example.demo.mem.repository.MemberRepository;
 import com.example.demo.mem.service.MemberService;
+import com.example.demo.mem.service.MemberServiceImpl;
 
 import lombok.RequiredArgsConstructor;
 
@@ -43,7 +44,7 @@ public class MemberController {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	final MemberRepository memberRepository;
-	final MemberService memberService;
+	final MemberServiceImpl memberService;
 	
 	@PostMapping("/join")
 	public Map<?,?> join(@RequestBody Member m) {

@@ -1,4 +1,4 @@
-package com.example.demo.prd.web;
+package com.example.demo.prd.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -17,18 +17,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.HomeController;
-import com.example.demo.brd.service.BoardRepository;
-import com.example.demo.prd.service.Product;
-import com.example.demo.prd.service.ProductMapper;
-import com.example.demo.prd.service.ProductService;
+import com.example.demo.brd.repository.BoardRepositoryImpl;
+import com.example.demo.prd.domain.Product;
+import com.example.demo.prd.repository.ProductRepositoy;
+import com.example.demo.prd.service.ProductServiceImpl;
 
 import lombok.RequiredArgsConstructor;
 
 @RestController @RequiredArgsConstructor
 @RequestMapping("/products")
 public class ProductContoller {
-	final ProductMapper productMapper;
-	final ProductService productService;
+	final ProductRepositoy productMapper;
+	final ProductServiceImpl productService;
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	@PostMapping("")
@@ -41,12 +41,15 @@ public class ProductContoller {
 	
 	@GetMapping("/list")
 	public List<Product> list() {
+		
 		return productMapper.selectAll();
 	}
 	
 	@GetMapping("/{prdId}")
 	public Product detail(@PathVariable int prdId) {
+		
 		logger.info("조회한 제품번호: " + prdId);
+		
 		return productMapper.selectById(prdId);
 	}
 	
