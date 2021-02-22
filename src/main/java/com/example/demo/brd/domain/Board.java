@@ -13,6 +13,7 @@ public class Board {
 	@Column(name="brd_content") private String brdContent;
 	@Column(name="brd_written_date") private String brdwrittenDate;
 	@Column(name="brd_rank") private String brdRank;
+	@Column(name="brd_img") private String brdImg;
 
 
 }

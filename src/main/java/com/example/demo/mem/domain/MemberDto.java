@@ -13,5 +13,6 @@ public class MemberDto {
 	private String memLevel;
 	private String memName;
 	private String memId;
-	private String memPassword;
+	private String memPwd;
+	private String brdImg;
 }
