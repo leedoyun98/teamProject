@@ -1,17 +1,14 @@
 package com.example.demo.prd.domain;
 
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Component
-@Data @Lazy
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
 public class Product {
-	private int prdId;
-	private String prdName, price, inventory;
+	@Id @Column(name="prd_id") private int prdId;
+	@Column(name="prd_name") private String prdName;
+	@Column(name="price") private String price;
+	@Column(name="inventory") private String inventory;
 }

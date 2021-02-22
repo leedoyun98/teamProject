@@ -1,15 +1,14 @@
 package com.example.demo.mem.domain;
 
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 
-@Component @Lazy @Data
-@NoArgsConstructor @AllArgsConstructor
+
+@Entity
 public class Member {
-	private String memid, password;
+	@Id @Column(name="mem_no") private int memNo;
+	@Column(name="memid") private String memid;
+	@Column(name="password") private String password;
 }

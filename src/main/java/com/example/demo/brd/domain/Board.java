@@ -3,9 +3,10 @@ package com.example.demo.brd.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
-@Entity
+@Entity 
 public class Board {
 	@Id @Column(name="board_num") private int boardNum;
 	@Column(name="title") private String  title;
