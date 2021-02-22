@@ -3,9 +3,10 @@ package com.example.demo.prd.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
-@Entity
+@Entity @Table(name="products")
 public class Product {
 	@Id @Column(name="prd_no") private int prdNo;
 	@Column(name="prd_name") private String prdName;
