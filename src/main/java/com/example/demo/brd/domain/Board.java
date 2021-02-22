@@ -18,7 +18,7 @@ public class Board {
 	@Column(name="brd_img") private String brdImg;
 	@Column(name="brd_kind") private int brdKind;
 	@Column(name="brd_mod_data") private String brdModData;
-	@Column(name="brd_count") private int count;
+	@Column(name="brd_count") @GeneratedValue(strategy = GenerationType.AUTO) private int count;
 	@Column(name="brd_like") private int brdLike;
 
 }
