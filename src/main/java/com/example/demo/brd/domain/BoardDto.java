@@ -19,6 +19,6 @@ public class BoardDto {
 	 private int brdKind;
 	 private String brdModData;
 	 private int count;
-	 private String brdLike;
+	 private int brdLike;
 
 }

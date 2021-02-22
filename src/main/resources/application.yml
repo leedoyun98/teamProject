@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://myinstance.c8n0dfiduht4.ap-northeast-2.rds.amazonaws.com/myinstance
+    driverClassName: org.mariadb.jdbc.Driver
+    username: myinstance
+    password: myinstance
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+     ddl-auto: update
+
